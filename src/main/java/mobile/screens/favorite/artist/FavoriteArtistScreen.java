@@ -14,6 +14,7 @@ import mobile.enums.ToastRemoveFromRec;
 import mobile.locators.favorite.FavoriteLocators;
 import mobile.locators.favorite.artist.FavoriteArtistLocators;
 import mobile.screens.BaseScreen;
+import mobile.utils.Helper;
 
 @Slf4j
 public class FavoriteArtistScreen extends BaseScreen {
@@ -125,14 +126,14 @@ public class FavoriteArtistScreen extends BaseScreen {
     }
 
     public FavoriteArtistScreen verifyToastWithMessageAfterRemoveFromRecDisplayed() {
-        assertThat(toast.getText().equalsIgnoreCase(ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.SECOND_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.THIRD_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.FOURTH_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.FIFTH_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.SIXTH_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.SEVENTH_MESSAGE.getValue()) ||
-                toast.getText().equalsIgnoreCase(ToastRemoveFromRec.EIGHTH_MESSAGE.getValue()))
+        assertThat(Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()) ||
+                Helper.isTextPresentInElement(toast, ToastRemoveFromRec.FIRST_MESSAGE.getValue()))
                 .withFailMessage("toast is not displayed").isTrue();
         return this;
     }

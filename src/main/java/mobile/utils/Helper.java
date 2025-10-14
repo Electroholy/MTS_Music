@@ -1,5 +1,7 @@
 package mobile.utils;
 
+import org.openqa.selenium.WebElement;
+
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -35,5 +37,9 @@ public class Helper {
 
     public static String getValue (String key) {
         return config.getProperty(key);
+    }
+
+    public static Boolean isTextPresentInElement (WebElement element, String text) {
+        return element.getText().equalsIgnoreCase(text);
     }
 }
