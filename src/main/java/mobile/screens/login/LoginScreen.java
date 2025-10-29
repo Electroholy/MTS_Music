@@ -69,7 +69,6 @@ public class LoginScreen extends BaseScreen {
     @SneakyThrows
     public MainScreen login (String tariff) {
         tapLoginButton();
-        waitUntilElementIsVisible(loginFormOutside);
         if (tariff.equalsIgnoreCase("music")) {
             wainUntilElementIsClickable(mtsMusicTariffNumber);
             mtsMusicTariffNumber.click();

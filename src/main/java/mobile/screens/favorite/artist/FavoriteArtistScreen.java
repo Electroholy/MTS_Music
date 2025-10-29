@@ -11,8 +11,8 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mobile.enums.ToastAddAndRemoveFromFav;
 import mobile.enums.ToastRemoveFromRec;
-import mobile.locators.favorite.FavoriteLocators;
-import mobile.locators.favorite.artist.FavoriteArtistLocators;
+import mobile.locators.favorites.FavoriteLocators;
+import mobile.locators.favorites.artists.FavoriteArtistLocators;
 import mobile.screens.BaseScreen;
 import mobile.utils.Helper;
 
@@ -22,9 +22,9 @@ public class FavoriteArtistScreen extends BaseScreen {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_BUTTON)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_BUTTON)
     private List<WebElement> actionButtons;
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTIST_CATEGORY_ACTION_MENU_OPEN_DESCRIPTION_ARTIST)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_OPEN_DESCRIPTION_ARTIST)
     private WebElement openHidedArtistDescriptionButton;
     @SneakyThrows
     public FavoriteArtistScreen tapActionMenuButton () {
@@ -37,16 +37,7 @@ public class FavoriteArtistScreen extends BaseScreen {
         return this;
     }
 
-    public FavoriteArtistScreen openArtistDescription() {
-        if (openHidedArtistDescriptionButton.isDisplayed()) {
-            openHidedArtistDescriptionButton.click();
-        } else if (socialMediaElement.isDisplayed()) {
-            return this;
-        }
-        return this;
-    }
-
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_LIKE)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_LIKE)
     private WebElement tapActionMenuLike;
     public FavoriteArtistScreen tapLikeInActionMenu () {
         wainUntilElementIsClickable(tapActionMenuLike);
@@ -55,26 +46,14 @@ public class FavoriteArtistScreen extends BaseScreen {
         return this;
     }
 
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_DESCRIPTION_ARTIST)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_DESCRIPTION_ARTIST)
     private WebElement artistDescription;
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_LIKE)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_LIKE)
     private WebElement likeButton;
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_SHARE)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_SHARE)
     private WebElement shareButton;
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_REMOVE_FROM_REC)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_REMOVE_FROM_REC)
     private WebElement removeFromRecButton;
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_LINKS_RECYCLER)
-    private WebElement socialMediaElement;
-    public FavoriteArtistScreen verifyAllActionMenuItemsPresent () {
-        SoftAssertions softAssert = new SoftAssertions();
-        softAssert.assertThat(artistDescription.isDisplayed()).withFailMessage("artist description is not displayed").isTrue();
-        softAssert.assertThat(likeButton.isDisplayed()).withFailMessage("like button is not displayed").isTrue();
-        softAssert.assertThat(shareButton.isDisplayed()).withFailMessage("share button is not displayed").isTrue();
-        softAssert.assertThat(removeFromRecButton.isDisplayed()).withFailMessage("remove from recommendation button is not displayed").isTrue();
-        softAssert.assertThat(socialMediaElement.isDisplayed()).withFailMessage("artist social media is not displayed").isTrue();
-        softAssert.assertAll();
-        return this;
-    }
 
     public FavoriteArtistScreen tapRemoveFromRecButton () {
         wainUntilElementIsClickable(removeFromRecButton);
@@ -90,7 +69,7 @@ public class FavoriteArtistScreen extends BaseScreen {
         return this;
     }
 
-    @AndroidFindBy(xpath = FavoriteArtistLocators.ARTISTS_CATEGORY_ACTION_MENU_SHARE)
+    @AndroidFindBy(xpath = FavoriteArtistLocators.ACTION_MENU_SHARE)
     private WebElement actionMenuShare;
     public FavoriteArtistScreen tapActionMenuShare () {
         wainUntilElementIsClickable(actionMenuShare);

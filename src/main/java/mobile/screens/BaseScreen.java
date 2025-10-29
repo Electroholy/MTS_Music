@@ -6,6 +6,9 @@ import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Match;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Screen;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -17,10 +20,15 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class BaseScreen {
     protected AppiumDriver driver;
     protected Random random = new Random();
+    protected Screen screen = new Screen();
 
     public BaseScreen (AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public Match findElementByImage (Pattern imageLocator) {
+        return screen.exists(imageLocator, 10);
     }
 
     public void waitUntilElementIsVisible(WebElement element) {
