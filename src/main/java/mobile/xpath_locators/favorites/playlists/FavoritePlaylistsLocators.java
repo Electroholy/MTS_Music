@@ -27,6 +27,7 @@ public class FavoritePlaylistsLocators {
     public static final String CREATE_NEW_PLAYLIST_CREATE_PLAYLIST_BUTTON = "//android.view.View[@content-desc='Создать плейлист.Кнопка']";
 
 
+
     public static final String PLAYLIST_COVER = "(//android.widget.ImageView[@resource-id='ru.mts.music.android:id/single_cover'])"; //по кол-ву плейлистов ищем поле ввода при создании нового плейлиста (+1)
     public static final String PLAYLIST_TITLE = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/playlist_title']";
     public static final String PLAYLIST_TRACK_COUNT = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/playlist_track_count']";
