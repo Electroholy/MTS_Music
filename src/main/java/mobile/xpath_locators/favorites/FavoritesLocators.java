@@ -1,6 +1,6 @@
-package mobile.locators.favorites;
+package mobile.xpath_locators.favorites;
 
-public class FavoriteLocators {
+public class FavoritesLocators {
     public static final String ARTISTS_CATEGORY = "//android.widget.Button[@resource-id='ru.mts.music.android:id/artists']";
     public static final String PLAYLISTS_CATEGORY = "//android.widget.Button[@resource-id='ru.mts.music.android:id/playlists']";
     public static final String ALBUMS_CATEGORY = "//android.widget.Button[@resource-id='ru.mts.music.android:id/albums']";

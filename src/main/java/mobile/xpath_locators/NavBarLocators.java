@@ -1,4 +1,4 @@
-package mobile.locators;
+package mobile.xpath_locators;
 
 public class NavBarLocators {
 }

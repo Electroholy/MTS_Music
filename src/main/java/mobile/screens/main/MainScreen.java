@@ -6,8 +6,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import mobile.locators.main.MainLocators;
-import mobile.locators.TabBarLocators;
+import mobile.xpath_locators.main.MainLocators;
+import mobile.xpath_locators.TabBarLocators;
 import mobile.screens.BaseScreen;
 import mobile.screens.favorite.FavoriteScreen;
 

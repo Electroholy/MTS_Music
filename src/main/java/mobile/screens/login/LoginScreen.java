@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.SneakyThrows;
-import mobile.locators.login.LoginLocators;
+import mobile.xpath_locators.login.LoginLocators;
 import mobile.screens.BaseScreen;
 import mobile.screens.main.MainScreen;
 import mobile.utils.Helper;

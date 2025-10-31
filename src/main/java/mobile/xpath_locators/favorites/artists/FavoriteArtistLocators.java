@@ -1,4 +1,4 @@
-package mobile.locators.favorites.artists;
+package mobile.xpath_locators.favorites.artists;
 
 import org.sikuli.script.Pattern;
 
@@ -11,6 +11,7 @@ public class FavoriteArtistLocators {
     public static final String ARTIST = "//androidx.recyclerview.widget.RecyclerView[@resource-id='ru.mts.music.android:id/recycler_view']/android.view.ViewGroup";
     public static final String ARTIST_NAME = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/favorite_artist_name']";
     public static final String ARTIST_TRACKS_COUNT = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/favorite_artist_track_count']";
+    public static final String EMPTY_SCREEN = "//android.widget.LinearLayout[@resource-id='ru.mts.music.android:id/placeholder_empty_favorite_artists']";
 
 
     public static final String ACTION_MENU_BUTTON = "(//android.widget.ImageButton[@resource-id='ru.mts.music.android:id/favorite_artist_more_actions_button'])";

@@ -1,4 +1,4 @@
-package mobile.locators;
+package mobile.xpath_locators;
 
 public class TabBarLocators {
     public static final String MAIN_TAB = "//android.widget.FrameLayout[@content-desc='Слушать']";

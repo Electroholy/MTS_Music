@@ -1,4 +1,4 @@
-package mobile.locators.login;
+package mobile.xpath_locators.login;
 
 public class LoginLocators {
     public static final String LOGIN_BUTTON = "//android.widget.Button";

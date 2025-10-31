@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.extern.slf4j.Slf4j;
-import mobile.locators.favorites.FavoriteLocators;
+import mobile.xpath_locators.favorites.FavoritesLocators;
 import mobile.screens.BaseScreen;
 import mobile.screens.favorite.artist.FavoriteArtistScreen;
 
@@ -15,7 +15,7 @@ public class FavoriteScreen extends BaseScreen {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = FavoriteLocators.ARTISTS_CATEGORY)
+    @AndroidFindBy(xpath = FavoritesLocators.ARTISTS_CATEGORY)
     private WebElement artistsCategory;
     public FavoriteArtistScreen tapArtistsCategory () {
         wainUntilElementIsClickable(artistsCategory);

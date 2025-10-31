@@ -1,4 +1,4 @@
-package mobile.locators.main;
+package mobile.xpath_locators.main;
 
 public class MainLocators {
     public static final String ALLOW_CONNECT_TO_FIND = "//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_button']";

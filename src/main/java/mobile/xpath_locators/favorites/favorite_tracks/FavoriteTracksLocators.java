@@ -1,4 +1,4 @@
-package mobile.locators.favorites.favorite_tracks;
+package mobile.xpath_locators.favorites.favorite_tracks;
 
 import org.sikuli.script.Pattern;
 
@@ -18,7 +18,12 @@ public class FavoriteTracksLocators {
     public static final String NAVBAR_ACTION_MENU_SORTING_BY_ALPHABET = "//android.widget.LinearLayout[@resource-id='ru.mts.music.android:id/order_by_alphabet']";
     public static final String NAVBAR_ACTION_MENU_SORTING_BY_DOWNLOAD_TRACKS = "//android.widget.LinearLayout[@resource-id='ru.mts.music.android:id/order_by_download']";
     public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/playlist_add_in_playlist_option']";
-
+    public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST_PLAYLISTS = "(//android.view.ViewGroup[@resource-id='ru.mts.music.android:id/playlist_dialog'])";
+    public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST_CREATE_NEW_PLAYLIST_BUTTON = "//android.view.View[@content-desc='Создать новый плейлист.Кнопка']";
+    public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST_CREATE_NEW_PLAYLIST_NAME_FIELD = "//android.widget.EditText[@resource-id='ru.mts.music.android:id/name_playlist']";
+    public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST_CREATE_NEW_PLAYLIST_REMOVE_BUTTON = "//android.widget.ImageView[@resource-id='ru.mts.music.android:id/delete_image_button']";
+    public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST_CREATE_NEW_PLAYLIST_CREATE_PLAYLIST_BUTTON = "//android.widget.Button[@resource-id='ru.mts.music.android:id/create_play_list']";
+    public static final String NAVBAR_ACTION_MENU_ADD_TRACK_IN_PLAYLIST_CREATE_NEW_PLAYLIST_CANCEL_BUTTON = "//android.widget.Button[@resource-id='ru.mts.music.android:id/cancel']";
 
     public static final Pattern NAVBAR_SEARCH_TRACK_BUTTON = new Pattern(MAIN_PATH_TO_IMAGE + "SearchButton.png");
     public static final String NAVBAR_SEARCH_CANCEL_BUTTON = "//android.widget.TextView[@text='Отмена']";
@@ -62,7 +67,6 @@ public class FavoriteTracksLocators {
     public static final String ACTION_MENU_NAVIGATE_TO_ALBUM = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/track_options_open_album']";
     public static final String ACTION_MENU_NAVIGATE_TO_ARTIST = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/track_options_open_artist']";
     public static final String ACTION_MENU_ABOUT_TRACK = "//android.widget.TextView[@resource-id='ru.mts.music.android:id/about_tracks']";
-
 
 
     public static final Pattern SCROLL_TO_TOP_BUTTON = new Pattern(MAIN_PATH_TO_IMAGE + "ScrollToTopButton.png");

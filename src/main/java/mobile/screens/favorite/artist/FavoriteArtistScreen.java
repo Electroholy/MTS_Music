@@ -11,8 +11,8 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mobile.enums.ToastAddAndRemoveFromFav;
 import mobile.enums.ToastRemoveFromRec;
-import mobile.locators.favorites.FavoriteLocators;
-import mobile.locators.favorites.artists.FavoriteArtistLocators;
+import mobile.xpath_locators.favorites.FavoritesLocators;
+import mobile.xpath_locators.favorites.artists.FavoriteArtistLocators;
 import mobile.screens.BaseScreen;
 import mobile.utils.Helper;
 
@@ -62,7 +62,7 @@ public class FavoriteArtistScreen extends BaseScreen {
         return this;
     }
 
-    @AndroidFindBy(xpath = FavoriteLocators.TOAST_WITH_MESSAGE_CATEGORY)
+    @AndroidFindBy(xpath = FavoritesLocators.TOAST_WITH_MESSAGE_CATEGORY)
     private WebElement toast;
     public FavoriteArtistScreen verifyToastWithMessageAfterDislikeDisplayed () {
         assertThat(toast.getText().equalsIgnoreCase(ToastAddAndRemoveFromFav.REMOVE_ARTIST_FROM_FAVORITE.getValue())).withFailMessage("toast is not displayed").isTrue();

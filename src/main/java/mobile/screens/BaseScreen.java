@@ -15,8 +15,12 @@ import java.util.Collections;
 import java.util.Random;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import lombok.extern.slf4j.Slf4j;
+import mobile.xpath_locators.favorites.playlists.FavoritePlaylistsLocators;
 
+@Slf4j
 public class BaseScreen {
     protected AppiumDriver driver;
     protected Random random = new Random();
@@ -27,8 +31,17 @@ public class BaseScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public Match findElementByImage (Pattern imageLocator) {
+    public Match findImage (Pattern imageLocator) {
         return screen.exists(imageLocator, 10);
+    }
+
+    public void findAndClickByImage (Pattern imageLocator) {
+        Match match = screen.exists(imageLocator, 10);
+        if (match != null) {
+            match.click();
+        } else {
+            log.error("{} not found", imageLocator);
+        }
     }
 
     public void waitUntilElementIsVisible(WebElement element) {
